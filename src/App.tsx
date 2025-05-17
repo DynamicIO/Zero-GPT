@@ -191,7 +191,7 @@ function App() {
                   textAlign: 'center',
                 }}
               >
-                Zero GPT
+                ZeroGPT
               </Typography>
               
               <ThemeToggleButton
