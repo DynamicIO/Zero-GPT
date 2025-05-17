@@ -97,6 +97,16 @@ const ThemeToggleButton = styled(IconButton)(({ theme }) => ({
   },
 }));
 
+const FooterText = styled(Typography)(({ theme }) => ({
+  position: 'fixed',
+  bottom: theme.spacing(2),
+  left: '50%',
+  transform: 'translateX(-50%)',
+  fontSize: '0.8rem',
+  color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
+  textAlign: 'center',
+}));
+
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [text, setText] = useState('');
@@ -164,6 +174,7 @@ function App() {
             ? 'linear-gradient(45deg, #121212 0%, #1e1e1e 100%)'
             : 'linear-gradient(45deg, #f5f5f5 0%, #ffffff 100%)',
           py: 4,
+          position: 'relative',
         }}
       >
         <Container maxWidth="md">
@@ -264,6 +275,9 @@ function App() {
             </Fade>
           </Box>
         </Container>
+        <FooterText variant="body2">
+          Powered by Dynamic.IO
+        </FooterText>
       </Box>
     </ThemeProvider>
   );
